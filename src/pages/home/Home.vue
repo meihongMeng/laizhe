@@ -1,13 +1,18 @@
 <template>
-  <home-header></home-header>
+  <div>
+    <index-header></index-header>
+    <index-swiper></index-swiper>
+  </div>
 </template>
 <script>
 
-import HeaderCompontent from "./Header"
+import Header from "./components/Header"
+import Swiper from "./components/Swiper"
 
 export default {
   components: {
-    "home-header": HeaderCompontent
+    "index-header": Header,
+    "index-swiper": Swiper
   }
 }
 </script>

@@ -26,6 +26,7 @@ export default {};
 .mh-header {
   height: 0.88rem;
   background: #00bcd4;
+  overflow: hidden;
 }
 .mh-header-left {
   float: left;
