@@ -104,8 +104,10 @@ export default {
 
 <style scoped>
 .swiper-container {
+  /* 让高度变为宽度的31.25%，只能用padding-bottom实现 */
   width: 100%;
-  height: 2rem;
+  height: 0;
+  padding-bottom: 31.25%;
 }
 .swiper-container .swiper-wrapper .swiper-slide {
   width: 100%!important;

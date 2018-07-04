@@ -2,10 +2,12 @@
  <header class="mh-header">
    <a class="mh-header-left iconfont icon-fanhui"></a>
    <div class="mh-header-title">
-      <a class="mh-linkarea" title="北京" href="javascript:void(0);">
-        <i class="mh-icon-search"></i>
-        <span class="mh-single-line">输入城市/景点/游玩主题</span>
-      </a>
+      <router-link to="/list">
+        <a class="mh-linkarea" title="北京" href="javascript:void(0);">
+          <i class="mh-icon-search"></i>
+          <span class="mh-single-line">输入城市/景点/游玩主题</span>
+        </a>
+      </router-link>
     </div>
     <div class="mh-header-right">
       <a href="javascript:void(0);" title="城市选择" class="mh-linkarea">
