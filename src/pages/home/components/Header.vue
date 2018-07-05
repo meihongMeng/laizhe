@@ -9,7 +9,7 @@
         </a>
       </router-link>
     </div>
-    <div class="mh-header-right">
+    <div class="mh-header-right" @click="handleClick">
       <a href="javascript:void(0);" title="城市选择" class="mh-linkarea">
         <span class="mh-nav-city">北京</span>
       </a>
@@ -17,7 +17,26 @@
   </header>
 </template>
 <script>
-export default {};
+export default {
+  methods: {
+    handleClick() {
+      this.$router.push({
+        //这个
+        // path: 'list/123'
+        //等同于
+        name: 'list',
+        params: {
+          id: 123
+        }
+        
+        // name: 'list',
+        // query: {  //  list?plan=private
+        //   plan: 'private'
+        // }
+      });
+    }
+  }
+};
 </script>
 <style scoped>
 

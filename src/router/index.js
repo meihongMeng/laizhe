@@ -11,6 +11,7 @@ Vue.use(Router)
 
 //3、生成一个router实例
 export default new Router({
+  // mode: "history", // url中没有“ # ”
   routes: [
     {
       path: '/',
@@ -18,26 +19,27 @@ export default new Router({
       component: Home
     },
     //动态路由
-    // {
-    //   path: '/list/:id/name/:name',
-    //   name: 'list',
-    //   component: List
-    // }
-
-    //嵌套路由
     {
-      path: '/list',
+      path: '/list/:id',
       name: 'list',
       component: List,
-      children: [{
-        path: 'a',
-        name: 'a',
-        component: A
-      },{
-        path: 'b',
-        name: 'b',
-        component: B
-      }]
+      props: true
     }
+
+    //嵌套路由
+    // {
+    //   path: '/list',
+    //   name: 'list',
+    //   component: List,
+    //   children: [{
+    //     path: 'a',
+    //     name: 'a',
+    //     component: A
+    //   },{
+    //     path: 'b',
+    //     name: 'b',
+    //     component: B
+    //   }]
+    // }
   ]
 })

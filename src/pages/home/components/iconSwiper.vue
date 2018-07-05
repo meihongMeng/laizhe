@@ -34,21 +34,45 @@ import { swiper, swiperSlide } from "vue-awesome-swiper";
 
 /*import {mapState} from 'vuex'*/
 export default {
+  props: ["iconSwiperInfo"],
   data() {
     return {
       swiperOption: {
         direction: "horizontal",
         autoHeight: true,
-        pagination: ".swiper-pagination",
-        observeParents: true
+        observeParents: true,
+         //分页器设置         
+        pagination: {
+          el: '.swiper-pagination',
+          clickable :true,
+          type: 'custom',
+          //自定义分页器样式
+          renderCustom: function (swiper, current, total) {
+            const activeColor = '#00afc7';
+            const normalColor = '#999';
+            let color = '';
+            let paginationStyle = '';
+            let html = '';
+            for (let i = 1; i <= total; i++) {
+              if (i === current) {
+                  color = activeColor;
+              } else {
+                  color = normalColor;
+              }
+              paginationStyle = `background:${color};opacity:1;margin-right:0.2rem;width:0.1rem;height:0.1rem;border-radius:100%;`
+              html += `<span class="swiper-pagination-bullet" style=${paginationStyle}></span>`
+            }
+            return html
+          }
+        }
       }
     };
   },
 
   computed: {
-    iconSwiperInfo() {
-      return this.$store.state.home.iconSwiperInfo;
-    }
+    // iconSwiperInfo() {
+    //   return this.$store.state.home.iconSwiperInfo;
+    // }
   },
 
   components: {
@@ -60,21 +84,21 @@ export default {
 
 <style scoped>
 .IconSwiper-img {
-    width: 0.66rem;
-    height: 0.66rem;
-    margin-top: 0.2rem;
-    margin-left: 0.58rem;
-    background: url(http://simg1.qunarzz.com/mobile_platform/mobile_douxing/qtuan/imgdefault.jpg)
-        #efefef center 50% no-repeat;
-    border-radius: 0.15rem;
+   display: inline-block;
+  width: 1.1rem;
+  height: 1.1rem;
 }
 .IconSwiper-img .IconSwiper-imgs {
-    width: 100%;
+    width: 1.1rem;
+    height: 1.1rem;
+    background: 0;
+    opacity: 1;
 }
 .IconSwiper-icon {
-    width: 25%;
-    overflow: hidden;
     float: left;
+    width: 25%;
+    height: 1.5rem;
+    padding-top: .1rem;
     text-align: center;
 }
 .swiper-slide {
@@ -82,10 +106,12 @@ export default {
 }
 .swiper-pagination {
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
 }
 .IconSwiper-ticket {
-    margin-top: 0.3rem;
+   margin-top: .1rem;
+    color: #212121;
+    font-size: .28rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

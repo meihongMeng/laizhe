@@ -1,9 +1,9 @@
 <!-- The ref attr used to find the swiper instance -->
 <template>
   <!-- swiper -->
-  <swiper :options="swiperOption">
-    <swiper-slide v-for="(slide, index) in swiperSlides" :key="index">
-      <img :src='slide' />
+  <swiper :options="swiperOption" ref="mySwiper">
+    <swiper-slide v-for="(item, index) in swiperInfo" :key="item.id">
+      <img :src='item.imgUrl' />
     </swiper-slide>
     <!-- Optional controls -->
     <div class="swiper-pagination"  slot="pagination"></div>
@@ -16,6 +16,7 @@
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {
+  props: ["swiperInfo"],
   name: 'carrousel',
    components: {
     swiper,
@@ -59,30 +60,24 @@ export default {
           type: 'custom',
           //自定义分页器样式
           renderCustom: function (swiper, current, total) {
-            const activeColor = '#fff'
-            const normalColor = '#aeaeae'
-            let color = ''
-            let paginationStyle = ''
-            let html = ''
+            const activeColor = '#fff';
+            const normalColor = '#aeaeae';
+            let color = '';
+            let paginationStyle = '';
+            let html = '';
             for (let i = 1; i <= total; i++) {
               if (i === current) {
-                  color = activeColor
+                  color = activeColor;
               } else {
-                  color = normalColor
+                  color = normalColor;
               }
-              paginationStyle = `background:${color};opacity:1;margin-right:20px;width:10px;height:10px;transform:skew(15deg);border-radius:0;`
+              paginationStyle = `background:${color};opacity:1;margin-right:0.15rem;width:0.1rem;height:0.1rem;border-radius:100%;`
               html += `<span class="swiper-pagination-bullet" style=${paginationStyle}></span>`
             }
             return html
           }
         }
-      },
-      swiperSlides: [
-        '../../../../static/images/home/1.png',
-        '../../../../static/images/home/2.png',
-        '../../../../static/images/home/3.png',
-        '../../../../static/images/home/4.png'
-      ]
+      }
     }
   },
    
@@ -94,8 +89,8 @@ export default {
   },
   mounted() {
     setInterval(() => {
-      if (this.swiperSlides.length < 4) {
-        this.swiperSlides.push(this.swiperSlides.length + 1)
+      if (this.swiperInfo.length < 4) {
+        this.swiperInfo.push(this.swiperInfo.length + 1)
       }
     }, 3000)
   }

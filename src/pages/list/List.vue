@@ -2,12 +2,14 @@
   <div>
     <!-- <div>{{title}} {{name}}</div> -->
     <div class="mh-listpage">公共的头部</div>
-    <router-view></router-view>
+    {{id}}
+    <!-- <router-view></router-view> -->
   </div>
 </template>
 
 <script>
 export default {
+  props: ['id']
     /*
   data() {
     return {

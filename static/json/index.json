@@ -1,0 +1,93 @@
+{
+  "ret": true,
+  "data": {
+    "swiperInfo": [{
+      "id": 1,
+      "imgUrl": "/static/images/home/1.png",
+      "link": "/list"
+    },{
+      "id": 2,
+      "imgUrl": "/static/images/home/2.png",
+      "link": "/list"
+    },{
+      "id": 3,
+      "imgUrl": "/static/images/home/3.png",
+      "link": "/list"
+    },{
+      "id": 4,
+      "imgUrl": "/static/images/home/4.png",
+      "link": "/list"
+    }],
+    "iconSwiperInfo": [{
+      "id": 1,
+      "imgUrl": "/static/images/home/icon-1.png",
+      "describe": "景点门票",
+      "link": ""    
+    },{
+      "id": 2,
+      "imgUrl": "/static/images/home/icon-2.png",
+      "describe": "必游榜单",
+      "link": ""    
+    },{
+      "id": 3,
+      "imgUrl": "/static/images/home/icon-3.png",
+      "describe": "夏日玩水",
+      "link": ""    
+    },{
+      "id": 4,
+      "imgUrl": "/static/images/home/icon-4.png",
+      "describe": "一日游",
+      "link": ""    
+    },{
+      "id": 5,
+      "imgUrl": "/static/images/home/icon-5.png",
+      "describe": "动植物园",
+      "link": ""    
+    },{
+      "id": 6,
+      "imgUrl": "/static/images/home/icon-6.png",
+      "describe": "故宫",
+      "link": ""    
+    },{
+      "id": 7,
+      "imgUrl": "/static/images/home/icon-7.png",
+      "describe": "主题乐园",
+      "link": ""    
+    },{
+      "id": 8,
+      "imgUrl": "/static/images/home/icon-8.png",
+      "describe": "Q+精选",
+      "link": ""    
+    },{
+      "id": 9,
+      "imgUrl": "/static/images/home/icon-9.png",
+      "describe": "演出",
+      "link": ""    
+    },{
+      "id": 10,
+      "imgUrl": "/static/images/home/icon-10.png",
+      "describe": "自然风光",
+      "link": ""    
+    },{
+      "id": 11,
+      "imgUrl": "/static/images/home/icon-11.png",
+      "describe": "名胜古迹",
+      "link": ""    
+    },{
+      "id": 12,
+      "imgUrl": "/static/images/home/icon-12.png",
+      "describe": "周边游",
+      "link": ""    
+    },{
+      "id": 13,
+      "imgUrl": "/static/images/home/icon-13.png",
+      "describe": "城市观光",
+      "link": ""    
+    },{
+      "id": 14,
+      "imgUrl": "/static/images/home/icon-14.png",
+      "describe": "游乐场",
+      "link": ""    
+    }]
+  }
+}
