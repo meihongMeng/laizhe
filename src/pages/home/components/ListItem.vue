@@ -17,8 +17,10 @@
           <span class="mh-piao-desc">天天好价1折起</span>
         </a>
       </li>
-      <li class="mh-activity-item mh-back-imgRgiht">
+      <li class="mh-activity-item mh-back-imgRight">
         <a href="javascript:void(0);" class="mh-fulllink">
+           <span class="mh-piao-sell">暑期大促</span>
+          <span class="mh-piao-desc">领券立减15元</span>
         </a>
       </li>
     </ul>
@@ -117,6 +119,10 @@ export default {
   }
   .mh-activity-con .mh-back-imgLeft {
     background: url(../../../../static/images/home/icon-piao.png) no-repeat 95px 0px;
+    background-size: auto 100%;
+  }
+  .mh-activity-con .mh-back-imgRight {
+    background: url(../../../../static/images/home/icon-water.png) no-repeat 95px 0px;
     background-size: auto 100%;
   }
 </style>

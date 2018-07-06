@@ -103,6 +103,7 @@ export default {
 }
 .swiper-slide {
     height: 3.8rem;
+    background: #fff;
 }
 .swiper-pagination {
     position: absolute;

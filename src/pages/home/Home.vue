@@ -4,6 +4,7 @@
     <index-swiper :swiperInfo = "swiperInfo"></index-swiper>
     <index-iconSwiper  :iconSwiperInfo = "iconSwiperInfo"></index-iconSwiper>
     <index-listItem></index-listItem>
+    <index-hotSale></index-hotSale>
   </div>
 </template>
 <script>
@@ -12,6 +13,7 @@ import Header from "./components/Header"
 import Swiper from "./components/Swiper"
 import IconSwiper from "./components/IconSwiper"
 import ListItem from "./components/ListItem"
+import HotSale from "./components/HotSale"
 import axios from 'axios'
 
 export default {
@@ -27,7 +29,8 @@ export default {
     "index-header": Header,
     "index-swiper": Swiper,
     "index-iconSwiper": IconSwiper,
-    "index-listItem": ListItem
+    "index-listItem": ListItem,
+    "index-hotSale": HotSale
   },
   methods: {
     getHomeData() {

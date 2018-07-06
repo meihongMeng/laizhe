@@ -88,6 +88,59 @@
       "imgUrl": "/static/images/home/icon-14.png",
       "describe": "游乐场",
       "link": ""    
+    }],
+    "hotList": [{
+      "id": 1,
+      "tipImg": "../images/icon/top-1.png",
+      "urlImg": "../images/home/hot-1.jpg",
+      "name": "故宫",
+      "price": 20
+    },{
+      "id": 2,
+      "tipImg": "../images/icon/top-2.png",
+      "urlImg": "../images/home/hot-2.jpg",
+      "name": "十渡聚龙湾玻璃栈道",
+      "price": 35
+    },{
+      "id": 3,
+      "urlImg": "../images/home/hot-3.jpg",
+      "name": "八达岭长城",
+      "price": 25
+    },{
+      "id": 4,
+      "urlImg": "../images/home/hot-4.jpg",
+      "name": "北京欢乐谷",
+      "price": 49
+    },{
+      "id": 5,
+      "urlImg": "../images/home/hot-5.jpg",
+      "name": "仙栖洞",
+      "price": 38
+    },{
+      "id": 6,
+      "urlImg": "../images/home/hot-6.jpg",
+      "name": "水立方",
+      "price": 14
+    },{
+      "id": 7,
+      "urlImg": "../images/home/hot-7.jpg",
+      "name": "颐和园",
+      "price": 48
+    },{
+      "id": 8,
+      "urlImg": "../images/home/hot-8.jpg",
+      "name": "定陵",
+      "price": 50
+    },{
+      "id": 9,
+      "urlImg": "../images/home/hot-11.jpg",
+      "name": "北京欢乐水魔方",
+      "price": 118.1
+    },{
+      "id": 10,
+      "urlImg": "../images/home/hot-12.jpg",
+      "name": "故宫礼物",
+      "price": 9
     }]
   }
 }
