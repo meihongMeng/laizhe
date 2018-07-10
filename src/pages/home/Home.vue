@@ -4,7 +4,10 @@
     <index-swiper :swiperInfo = "swiperInfo"></index-swiper>
     <index-iconSwiper  :iconSwiperInfo = "iconSwiperInfo"></index-iconSwiper>
     <index-listItem></index-listItem>
-    <index-hotSale></index-hotSale>
+    <index-hotSale :hotListInfo = "hotListInfo"></index-hotSale>
+    <index-guessLike :guessLikeInfo = "guessLikeInfo"></index-guessLike>
+    <index-weekendTrip :weekendTripInfo = "weekendTripInfo"></index-weekendTrip>
+    <index-footer></index-footer>
   </div>
 </template>
 <script>
@@ -14,6 +17,9 @@ import Swiper from "./components/Swiper"
 import IconSwiper from "./components/IconSwiper"
 import ListItem from "./components/ListItem"
 import HotSale from "./components/HotSale"
+import GuessLike from "./components/GuessLike"
+import WeekendTrip from "./components/WeekendTrip"
+import Footer from "../common/Footer"
 import axios from 'axios'
 
 export default {
@@ -21,7 +27,10 @@ export default {
   data() {
     return {
       swiperInfo: [],
-      iconSwiperInfo: []
+      iconSwiperInfo: [],
+      hotListInfo: [],
+      guessLikeInfo: [],
+      weekendTripInfo: []
     }
   },
 
@@ -30,7 +39,10 @@ export default {
     "index-swiper": Swiper,
     "index-iconSwiper": IconSwiper,
     "index-listItem": ListItem,
-    "index-hotSale": HotSale
+    "index-hotSale": HotSale,
+    "index-guessLike": GuessLike,
+    "index-weekendTrip": WeekendTrip,
+    "index-footer": Footer
   },
   methods: {
     getHomeData() {
@@ -44,6 +56,9 @@ export default {
         var {data} = response.data;
         this.swiperInfo = data.swiperInfo;
         this.iconSwiperInfo = data.iconSwiperInfo;
+        this.hotListInfo = data.hotListInfo;
+        this.guessLikeInfo = data.guessLikeInfo;
+        this.weekendTripInfo = data.weekendTripInfo;
       }
     },
     handleGetDataErr(error) {

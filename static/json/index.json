@@ -89,58 +89,304 @@
       "describe": "游乐场",
       "link": ""    
     }],
-    "hotList": [{
+    "hotListInfo": [{
       "id": 1,
-      "tipImg": "../images/icon/top-1.png",
-      "urlImg": "../images/home/hot-1.jpg",
+      "tipImg": "/static/images/icon/top-1.png",
+      "urlImg": "/static/images/home/hot-1.jpg",
       "name": "故宫",
       "price": 20
     },{
       "id": 2,
-      "tipImg": "../images/icon/top-2.png",
-      "urlImg": "../images/home/hot-2.jpg",
+      "tipImg": "/static/images/icon/top-2.png",
+      "urlImg": "/static/images/home/hot-2.jpg",
       "name": "十渡聚龙湾玻璃栈道",
       "price": 35
     },{
       "id": 3,
-      "urlImg": "../images/home/hot-3.jpg",
+      "tipImg": "/static/images/icon/top-3.png",
+      "urlImg": "/static/images/home/hot-3.jpg",
       "name": "八达岭长城",
       "price": 25
     },{
       "id": 4,
-      "urlImg": "../images/home/hot-4.jpg",
+      "urlImg": "/static/images/home/hot-4.jpg",
       "name": "北京欢乐谷",
       "price": 49
     },{
       "id": 5,
-      "urlImg": "../images/home/hot-5.jpg",
+      "urlImg": "/static/images/home/hot-5.jpg",
       "name": "仙栖洞",
       "price": 38
     },{
       "id": 6,
-      "urlImg": "../images/home/hot-6.jpg",
+      "urlImg": "/static/images/home/hot-6.jpg",
       "name": "水立方",
       "price": 14
     },{
       "id": 7,
-      "urlImg": "../images/home/hot-7.jpg",
+      "urlImg": "/static/images/home/hot-7.jpg",
       "name": "颐和园",
       "price": 48
     },{
       "id": 8,
-      "urlImg": "../images/home/hot-8.jpg",
+      "urlImg": "/static/images/home/hot-8.jpg",
       "name": "定陵",
       "price": 50
     },{
       "id": 9,
-      "urlImg": "../images/home/hot-11.jpg",
+      "urlImg": "/static/images/home/hot-9.jpg",
       "name": "北京欢乐水魔方",
       "price": 118.1
     },{
       "id": 10,
-      "urlImg": "../images/home/hot-12.jpg",
+      "urlImg": "/static/images/home/hot-10.jpg",
       "name": "故宫礼物",
       "price": 9
+    }],
+    "guessLikeInfo": [{
+      "id": 1,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-1.jpg",
+      "urlName": "金海湖风景区",
+      "number": "1326",
+      "price": "24",
+      "city": "平谷区"
+    },{
+      "id": 2,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-2.jpg",
+      "urlName": "北京国际鲜花港",
+      "number": "1908",
+      "price": "24.9",
+      "city": "顺义区"
+    },{
+      "id": 3,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-3.jpg",
+      "urlName": "北京欢乐谷",
+      "number": "54576",
+      "price": "49",
+      "city": "朝阳区",
+      "feature": "👍小伙伴们都收藏了，去看看吧~"
+    },{
+      "id": 4,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-4.jpg",
+      "urlName": "北京欢乐水魔方",
+      "number": "2549",
+      "price": "111",
+      "city": "丰台区"
+    },{
+      "id": 5,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-5.jpg",
+      "urlName": "水立方嬉水乐园",
+      "number": "1532",
+      "price": "248",
+      "city": "水立方"
+    },{
+      "id": 6,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-6.jpg",
+      "urlName": "水立方",
+      "number": "3248",
+      "price": "14",
+      "city": "奥林匹克公园",
+      "feature": "中国的荣耀，阳光下的晶莹水滴"
+    },{
+      "id": 7,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-7.jpg",
+      "urlName": "北京动物园",
+      "number": "4641",
+      "price": "39.9",
+      "city": "西城区"
+    },{
+      "id": 8,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-8.jpg",
+      "urlName": "古北水镇",
+      "number": "6823",
+      "price": "150",
+      "city": "密云县"
+    },{
+      "id": 9,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-9.jpg",
+      "urlName": "北京野生动物园",
+      "number": "11300",
+      "price": "72",
+      "city": "大兴区",
+      "feature": "北京郊区的一座大型自然生态动物园"
+    },{
+      "id": 10,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-10.jpg",
+      "urlName": "北京杜莎夫人蜡像馆",
+      "number": "6313",
+      "price": "86",
+      "city": "前门大街"
+    },{
+      "id": 11,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-11.jpg",
+      "urlName": "北京海洋馆",
+      "number": "2345",
+      "price": "78",
+      "city": "西城区",
+      "feature": "奇幻海洋之旅，在帝都感受大海的魅力"
+    },{
+      "id": 12,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-12.jpg",
+      "urlName": "太平洋海底世界",
+      "number": "2800",
+      "price": "57",
+      "city": "海淀区"
+    },{
+      "id": 13,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-13.jpg",
+      "urlName": "京东石林峡",
+      "number": "1821",
+      "price": "67",
+      "city": "平谷区"
+    },{
+      "id": 14,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-14.jpg",
+      "urlName": "古北水镇天然温泉",
+      "number": "524",
+      "price": "150",
+      "city": "古北水镇",
+      "feature": "水镇内河道密布，古老的汤河支流萦绕其间"
+    },{
+      "id": 15,
+      "tip": "可订明日",
+      "urlImg": "/static/images/home/like-15.jpg",
+      "urlName": "富国海底世界",
+      "number": "3231",
+      "price": "77.9",
+      "city": "朝阳区"
+    },{
+      "id": 16,
+      "tip": "可订明日",
+      "urlImg": "/static/images/home/like-16.jpg",
+      "urlName": "恭王府",
+      "number": "27747",
+      "price": "20",
+      "city": "西城区",
+      "feature": "一起去看看和珅家"
+    },{
+      "id": 17,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-17.jpg",
+      "urlName": "故宫",
+      "number": "242504",
+      "price": "20",
+      "city": "东城区"
+    },{
+      "id": 18,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-18.jpg",
+      "urlName": "世界公园",
+      "number": "3697",
+      "price": "80",
+      "city": "丰台区",
+      "feature": "40个国家的109处著名古迹名胜微缩景点"
+    },{
+      "id": 19,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-19.jpg",
+      "urlName": "八达岭长城",
+      "number": "32575",
+      "price": "25",
+      "city": "延庆县",
+      "feature": "这里特别受欢迎哟(๑‾ ꇴ ‾๑)"
+    },{
+      "id": 20,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-20.jpg",
+      "urlName": "北海公园",
+      "number": "3837",
+      "price": "9.7",
+      "city": "西城区"
+    },{
+      "id": 21,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-21.jpg",
+      "urlName": "北京活的3D博物馆",
+      "number": "626",
+      "price": "35",
+      "city": "朝阳区"
+    },{
+      "id": 22,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-22.jpg",
+      "urlName": "南宫温泉水世界",
+      "number": "1175",
+      "price": "57",
+      "city": "南宫旅游",
+      "feature": "温泉与水世界，沐浴与戏水的有趣结合"
+    },{
+      "id": 23,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-23.jpg",
+      "urlName": "中央电视塔",
+      "number": "3196",
+      "price": "60",
+      "city": "海淀区"
+    },{
+      "id": 24,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-24.jpg",
+      "urlName": "世界花卉大观园",
+      "number": "4465",
+      "price": "33.9",
+      "city": "丰台区"
+    },{
+      "id": 25,
+      "tip": "随买随用",
+      "urlImg": "/static/images/home/like-25.jpg",
+      "urlName": "十渡聚龙湾玻璃栈道",
+      "number": "2778",
+      "price": "35",
+      "city": "十渡风景区"
+    },{
+      "id": 26,
+      "tip": "可订明日",
+      "urlImg": "/static/images/home/like-26.jpg",
+      "urlName": "八达岭野生动物园",
+      "number": "3314",
+      "price": "38",
+      "city": "延庆县",
+      "feature": "🔥好评如潮，小伙伴热推景点~"
+    }],
+    "weekendTripInfo": [{
+      "id": 1,
+      "urlImg": "/static/images/home/week-1.jpg",
+      "procName": "漂流勇进，烧烤露营",
+      "procDesc": "轻松水上漂，任我乐逍遥"
+    },{
+      "id": 2,
+      "urlImg": "/static/images/home/week-2.jpg",
+      "procName": "北京清凉避暑胜地",
+      "procDesc": "到大自然中享受“天然空调”的清凉"
+    },{
+      "id": 3,
+      "urlImg": "/static/images/home/week-3.jpg",
+      "procName": "北京必游TOP10",
+      "procDesc": "来北京必去的景点非这些地方莫属"
+    },{
+      "id": 4,
+      "urlImg": "/static/images/home/week-4.jpg",
+      "procName": "寻找北京的皇城范儿",
+      "procDesc": "数百年的宫廷庙宇，至今依旧威严霸气"
+    },{
+      "id": 5,
+      "urlImg": "/static/images/home/week-5.jpg",
+      "procName": "学生最爱的博物馆",
+      "procDesc": "周末干嘛？北京很多博物馆已经免费开放啦"
     }]
   }
 }

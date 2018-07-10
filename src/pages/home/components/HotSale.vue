@@ -9,17 +9,17 @@
       </a>
     </div>
     <ul class="mh-hotsale-list">
-      <li class="mh-hotsale-item">
+      <li class="mh-hotsale-item" v-for="(item,index) in hotListInfo" :key="item.id">
         <a class="mh-fulllink" href="javascript:void(0);">
           <div class="mh-hotsale-tag image-ready">
-            <img class="mh-hotsale-tagimg" src="../../../../static/images/icon/top-1.png" alt="故宫">
+            <img class="mh-hotsale-tagimg" :src="item.tipImg">
           </div>
           <div class="mh-hotsale-imgcon image-ready">
-            <img src="../../../../static/images/home/hot-1.jpg" alt="故宫">
+            <img :src="item.urlImg" alt="故宫">
           </div>
-          <div class="mh-hotsale-sight mh-ellipsis">故宫</div>
+          <div class="mh-hotsale-sight mh-ellipsis">{{item.name}}</div>
           <div class="mh-hotsale-price">
-            <span class="mhg-price">¥<em class="mhg-price-num">20</em></span>
+            <span class="mhg-price">¥<em class="mhg-price-num">{{item.price}}</em></span>
             起
           </div>
         </a>
@@ -30,7 +30,7 @@
 
 <script>
 export default {
-  
+  props: ["hotListInfo"]
 }
 </script>
 
@@ -129,5 +129,8 @@ export default {
   }
   .mh-hotsale-price .mhg-price-num {
     font-size: .28rem;
+  }
+  .mh-hotsale-item:not(:first-child) {
+    margin-left: .12rem;
   }
 </style>
