@@ -58,7 +58,7 @@ export default {
 .mh-header-title {
     position: absolute;
     left: 0.8rem;
-    right: 1.36rem;
+    right: 1.7rem;
     top: 0.14rem;
     line-height: 0.6rem;
     background: #fff;
@@ -70,9 +70,8 @@ export default {
 }
 .mh-header-right {
     float: right;
-    width: 1.28rem;
+    width: 1.6rem;
     line-height: 0.88rem;
-    text-align: center;
 }
 .mh-header-right a.mh-linkarea {
     position: relative;
@@ -80,16 +79,17 @@ export default {
 }
 .mh-header-right a.mh-linkarea .mh-nav-city {
     display: inline-block;
-    width: 1rem;
+    width: 1.1rem;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    word-break:keep-all;/* 不换行 */
+    white-space:nowrap;
+    text-align: right;
 }
 .mh-header-right a.mh-linkarea .mh-nav-city:after {
     content: "";
     position: absolute;
     top: -0.25rem;
-    right: -0.13rem;
+    right: -0.24rem;
     width: 0;
     height: 0;
     border-left: 6px solid transparent;

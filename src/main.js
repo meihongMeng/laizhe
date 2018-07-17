@@ -4,9 +4,11 @@ import Vue from 'vue'
 import App from './App'
 // router就是路由实例
 import router from './router'
+import  VueResource  from 'vue-resource'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 Vue.use(VueAwesomeSwiper)
+Vue.use(VueResource) 
 
 Vue.config.productionTip = false
 
