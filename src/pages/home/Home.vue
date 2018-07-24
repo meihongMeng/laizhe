@@ -1,12 +1,12 @@
 <template>
   <div>
     <index-header></index-header>
-    <index-swiper :swiperInfo = "swiperInfo"></index-swiper>
-    <index-iconSwiper  :iconSwiperInfo = "iconSwiperInfo"></index-iconSwiper>
+    <index-swiper :swiperInfo = "this.$store.state.swiperInfo"></index-swiper>
+    <index-iconSwiper  :iconSwiperInfo = "this.$store.state.iconSwiperInfo"></index-iconSwiper>
     <index-listItem></index-listItem>
-    <index-hotSale :hotListInfo = "hotListInfo"></index-hotSale>
-    <index-guessLike :guessLikeInfo = "guessLikeInfo"></index-guessLike>
-    <index-weekendTrip :weekendTripInfo = "weekendTripInfo"></index-weekendTrip>
+    <index-hotSale :hotListInfo = "this.$store.state.hotListInfo"></index-hotSale>
+    <index-guessLike :guessLikeInfo = "this.$store.state.guessLikeInfo"></index-guessLike>
+    <index-weekendTrip :weekendTripInfo = "this.$store.state.weekendTripInfo"></index-weekendTrip>
     <index-footer></index-footer>
   </div>
 </template>
@@ -20,19 +20,8 @@ import HotSale from "./components/HotSale"
 import GuessLike from "./components/GuessLike"
 import WeekendTrip from "./components/WeekendTrip"
 import Footer from "../common/Footer"
-import axios from 'axios'
 
 export default {
-
-  data() {
-    return {
-      swiperInfo: [],
-      iconSwiperInfo: [],
-      hotListInfo: [],
-      guessLikeInfo: [],
-      weekendTripInfo: []
-    }
-  },
 
   components: {
     "index-header": Header,
@@ -45,28 +34,37 @@ export default {
     "index-footer": Footer
   },
   methods: {
-    getHomeData() {
-      axios.get('/static/json/index.json')
-      .then(this.handleGetDataSucc.bind(this))
-      .catch(this.handleGetDataErr.bind(this))
-    },
-    handleGetDataSucc(response) {
-      if (response.status === 200) {
-        // var data = response.data.data;
-        var {data} = response.data;
-        this.swiperInfo = data.swiperInfo;
-        this.iconSwiperInfo = data.iconSwiperInfo;
-        this.hotListInfo = data.hotListInfo;
-        this.guessLikeInfo = data.guessLikeInfo;
-        this.weekendTripInfo = data.weekendTripInfo;
-      }
-    },
-    handleGetDataErr(error) {
-      console.log(error);
-    }
+    // getHomeData() {
+    //   axios.get('/static/json/index.json')
+    //   .then(this.handleGetDataSucc.bind(this))
+    //   .catch(this.handleGetDataErr.bind(this))
+    // },
+    // handleGetDataSucc(response) {
+    //   if (response.status === 200) {
+    //     // var data = response.data.data;
+    //     var {data} = response.data;
+    //     //想办法让mutations里的方法执行
+    //     this.$store.commit("changeSwiperInfo", data.swiperInfo);
+    //     //this.$store.commit("changeSwiperInfo", data);
+    //     this.$store.commit("changeIconSwiperInfo", data.iconSwiperInfo);
+    //     this.$store.commit("changeHotListInfo", data.hotListInfo);
+    //     this.$store.commit("changeGuessLikeInfo", data.guessLikeInfo);
+    //     this.$store.commit("changeWeekendTripInfo", data.weekendTripInfo);
+
+    //     //this.swiperInfo = data.swiperInfo;
+    //     //this.iconSwiperInfo = data.iconSwiperInfo;
+    //     //this.hotListInfo = data.hotListInfo;
+    //     //this.guessLikeInfo = data.guessLikeInfo;
+    //     //this.weekendTripInfo = data.weekendTripInfo;
+    //   }
+    // },
+    // handleGetDataErr(error) {
+    //   console.log(error);
+    // }
   },
   mounted() {
-    this.getHomeData();
+    this.$store.dispatch("getSwiperInfo");
+    // this.getHomeData();
   }
 }
 </script>

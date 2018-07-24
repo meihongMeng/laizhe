@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 // router就是路由实例
 import router from './router'
+// 引入store
+import store from './vuex'
 import  VueResource  from 'vue-resource'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
@@ -17,6 +19,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
