@@ -14,9 +14,9 @@
 <script>
 
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import {mapState} from 'vuex'
 
 export default {
-  props: ["swiperInfo"],
   name: 'carrousel',
    components: {
     swiper,
@@ -80,13 +80,26 @@ export default {
       }
     }
   },
-   
- // 如果你需要得到当前的swiper对象来做一些事情，你可以像下面这样定义一个方法属性来获取当前的swiper对象，同时notNextTick必须为true
-  computed: {
+
+  //mapState映射
+  computed: mapState({ 
     swiper() {
       return this.$refs.mySwiper.swiper
+    },
+    swiperInfo(state) {
+      return state.home.swiperInfo;
     }
-  },
+  }),
+   
+ // 如果你需要得到当前的swiper对象来做一些事情，你可以像下面这样定义一个方法属性来获取当前的swiper对象，同时notNextTick必须为true
+  // computed: {
+  //   swiper() {
+  //     return this.$refs.mySwiper.swiper
+  //   },
+  //   swiperInfo() {
+  //     return this.$store.state.home.swiperInfo;
+  //   }
+  // },
   mounted() {
     setInterval(() => {
       if (this.swiperInfo.length < 4) {

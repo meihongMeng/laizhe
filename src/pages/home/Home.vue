@@ -1,12 +1,12 @@
 <template>
   <div>
     <index-header></index-header>
-    <index-swiper :swiperInfo = "this.$store.state.swiperInfo"></index-swiper>
-    <index-iconSwiper  :iconSwiperInfo = "this.$store.state.iconSwiperInfo"></index-iconSwiper>
+    <index-swiper></index-swiper>
+    <index-iconSwiper></index-iconSwiper>
     <index-listItem></index-listItem>
-    <index-hotSale :hotListInfo = "this.$store.state.hotListInfo"></index-hotSale>
-    <index-guessLike :guessLikeInfo = "this.$store.state.guessLikeInfo"></index-guessLike>
-    <index-weekendTrip :weekendTripInfo = "this.$store.state.weekendTripInfo"></index-weekendTrip>
+    <index-hotSale></index-hotSale>
+    <index-guessLike></index-guessLike>
+    <index-weekendTrip></index-weekendTrip>
     <index-footer></index-footer>
   </div>
 </template>
@@ -63,8 +63,10 @@ export default {
     // }
   },
   mounted() {
-    this.$store.dispatch("getSwiperInfo");
-    // this.getHomeData();
+    if(this.$store.getters.shouldGetData){
+      this.$store.dispatch("getIndexInfo");
+      // this.getHomeData();
+    }
   }
 }
 </script>

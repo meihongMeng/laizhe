@@ -29,8 +29,15 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
+
 export default {
-  props: ["hotListInfo"]
+  computed: mapState({
+    hotListInfo(state) {
+      // return this.$store.state.home.hotListInfo;
+      return state.home.hotListInfo;
+    }
+  })
 }
 </script>
 

@@ -31,10 +31,9 @@
 
 <script>
 import { swiper, swiperSlide } from "vue-awesome-swiper";
+import { mapState } from 'vuex';
 
-/*import {mapState} from 'vuex'*/
 export default {
-  props: ["iconSwiperInfo"],
   data() {
     return {
       swiperOption: {
@@ -69,11 +68,15 @@ export default {
     };
   },
 
-  computed: {
+  computed: mapState({
     // iconSwiperInfo() {
     //   return this.$store.state.home.iconSwiperInfo;
     // }
-  },
+    iconSwiperInfo(state) {
+      // return this.$store.state.home.iconSwiperInfo;
+      return state.home.iconSwiperInfo;
+    }
+  }),
 
   components: {
     swiper,

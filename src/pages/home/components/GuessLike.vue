@@ -33,8 +33,14 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
-  props: ["guessLikeInfo"]
+  computed: mapState({
+    guessLikeInfo(state) {
+      // return this.$store.state.home.guessLikeInfo;
+      return state.home.guessLikeInfo;
+    }
+  })
 }
 </script>
 

@@ -18,8 +18,15 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
+
 export default {
-  props: ["weekendTripInfo"]
+  computed: mapState({
+    weekendTripInfo(state) {
+      // return this.$store.state.home.weekendTripInfo;
+      return state.home.weekendTripInfo;
+    }
+  })
 }
 </script>
 
